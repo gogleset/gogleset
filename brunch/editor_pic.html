@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        dl, ul, ol, menu, li {
+    list-style: none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+        .editor_pic {
+            position: relative;
+            margin-top: 22px;
+            overflow: hidden;
+        }
+.editor_pic .wrap_slide {
+    overflow: visible;
+    width: 960px;
+    height: 520px;
+}
+.wrap_slide {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.wrap_slide .list_slide {
+    position: absolute;
+    top: 0;
+}
+.wrap_slide .list_slide li {
+    float: left;
+}
+.wrap_pic {
+    overflow: hidden;
+    width: 960px;
+}
+.PC_DISCOVER_BRUNCHBOOK .item_pic_type1 {
+    position: relative;
+    background-image: linear-gradient(-180deg,#f4f4f4 0,#dedede 82%);
+    background-image: -moz-linear-gradient(-180deg,#f4f4f4 0,#dedede 82%);
+}
+.PC_DISCOVER_BRUNCHBOOK .item_pic_type1 {
+    width: 50%;
+    height: 520px;
+}
+.wrap_pic .item_pic {
+    position: relative;
+    float: left;
+}
+.wrap_pic .item_pic .link_item {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .item_pic_type2 {
+    width: 50%;
+    height: 260px;
+}
+
+.wrap_pic .item_pic {
+    position: relative;
+    float: left;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .item_pic_type3 {
+    width: 50%;
+    height: 260px;
+}
+
+.wrap_pic .img_pic {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .link_item .fade_cover1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: -webkit-opacity .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.book_cover {
+    display: block;
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    z-index: 5;
+    width: 230px;
+    height: 324px;
+    margin-left: -115px;
+    padding: 68px 0 0;
+    border-radius: 2px 6px 6px 2px;
+    background-color: #ddd;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+
+.book_cover .cont_cover {
+    position: relative;
+    z-index: 1;
+    margin: 0 50px;
+    width: 130px;
+    height: 172px;
+    background-color: #fff;
+}
+
+.book_cover .tit_cover {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 92px;
+    padding: 10px 13px 0 10px;
+    font-weight: 400;
+    font-family: "Nanum Myeongjo",sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.book_cover .txt_writer {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    width: 100%;
+    max-height: 35px;
+    padding: 0 10px;
+    font-family: "Nanum Myeongjo",sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+    color: #666;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.book_cover .dimmed_book_type1 {
+    z-index: 10;
+}
+
+.dimmed_book_type1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 100%;
+}
+
+.book_cover .txt_publisher {
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    font-size: 11px;
+    line-height: 18px;
+    font-family: "SF Pro Bold","Malgun Gothic";
+    letter-spacing: .2px;
+    color: #fff;
+    text-align: center;
+}
+
+.book_cover .dimmed_cover {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px 6px 6px 0;
+    background-color: rgba(0,0,0,.1);
+}
+
+.PC_DISCOVER_BRUNCHBOOK .info_release {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 109px;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .inner-info {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .info_release .txt_g {
+    display: block;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .info_release .txt_g+.txt_g {
+    letter-spacing: -.1px;
+    color: #959595;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .append_info {
+    display: table;
+    height: 100%;
+}
+
+.PC_DISCOVER_B2 .append_info {
+    display: table;
+    height: 100%;
+}
+
+.wrap_pic .append_info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    margin-left: -50%;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.info_g {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wrap_pic .cate_pic {
+    display: inline;
+    border-bottom: 1px solid #fff;
+    font-size: 13px;
+    font-family: 'Noto Sans Light',sans-serif;
+}
+
+.wrap_pic .tit_pic {
+    display: block;
+    padding-top: 12px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'Nanum Myeongjo',sans-serif;
+    letter-spacing: -.025em;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .txt_pic {
+    display: none;
+}
+
+.wrap_pic .txt_pic {
+    display: block;
+    padding-top: 9px;
+    line-height: 20px;
+    font-family: 'Noto Sans Light',sans-serif;
+}
+
+.wrap_pic .info_g .info_by {
+    width: 200px;
+}
+
+.info_g .info_by {
+    padding-top: 30px;
+    font-size: 12px;
+    font-family: "Noto Sans Light",sans-serif;
+    color: #fff;
+    opacity: .8;
+    filter: alpha(opacity=50);
+}
+
+.editor_pic .ico_by {
+    background-position: -38px -130px;
+}
+
+.wrap_pic .ico_by {
+    color: #fff;
+}
+
+.info_by .ico_by {
+    width: 14px;
+    height: 13px;
+    margin-top: 3px;
+}
+
+.ico_by {
+    font-family: Georgia,sans-serif;
+    font-style: italic;
+    color: #bfbfbf;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .align_g {
+    height: 260px;
+}
+
+.align_g {
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.wrap_pic .item_pic .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.PC_DISCOVER_BRUNCHBOOK .item_pic_type3 {
+    width: 50%;
+    height: 260px;
+}
+
+.wrap_pic .cate_pic {
+    display: inline;
+    border-bottom: 1px solid #fff;
+    font-size: 13px;
+    font-family: 'Noto Sans Light',sans-serif;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="editor_pic">
+        <div class="wrap_slide swiper-container1">
+            <ul class="list_slide swiper-wrapper"
+                style="width: 900%; transform: translateX(0px); transition: -webkit-transform 0.3s ease 0s;">
+                <li>
+                    <div class="wrap_pic PC_DISCOVER_BRUNCHBOOK  ">
+
+                        <div class="item_pic item_pic_type1 #home_discover_brunchbook">
+                            <a href="/brunchbook/seconlife" class="link_item #new" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/brunchbook/seconlife" data-tiara-setnum="1"
+                                data-tiara-copy="별일 없이 잘산다_쉼표">
+                                <span class="fade_cover1"></span>
+                                <span class="book_cover"
+                                    style="background-image:url('//img1.daumcdn.net/thumb/C460x648.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/8en5/image/BVON7Rbd2FN3_Poq6mx26d7ezUQ.jpg')">
+                                    <!-- 위치조정시 left 값으로 조절 -->
+                                    <div class="cont_cover">
+                                        <strong class="tit_cover">별일 없이<br>잘<br>산다_쉼표<br></strong>
+                                        <span class="txt_writer">김정희</span>
+                                    </div>
+                                    <span class="dimmed_book_type1"></span>
+                                    <span class="txt_publisher">brunch book</span>
+                                    <span class="dimmed_cover"></span>
+                                </span>
+
+                                <span class="info_release">
+                                    <span class="inner-info">
+                                        <span class="txt_g">First Edition</span>
+                                        <span class="txt_g">Released date.Apr.02.2021</span>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="item_pic item_pic_type2">
+                            <a href="/@@dfN1/6" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@dfN1/6" data-tiara-setnum="2"
+                                data-tiara-copy="&quot;남편분이랑 같이만나요.&quot;">
+                                <img src="//img1.daumcdn.net/thumb/C480x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/cdf8e7872ffd42f7902dd2851661c59d"
+                                    class="img_pic" alt="&quot;남편분이랑 같이<br>만나요.&quot;<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">"남편분이랑 같이<br>만나요."<br></strong>
+                                            <span class="txt_pic"></span>
+                                            <span class="info_by"><span class="ico_brunch ico_by">by</span> SOME</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <div class="item_pic item_pic_type3">
+                            <a href="/@@bOz2/187" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@bOz2/187" data-tiara-setnum="3" data-tiara-copy="자꾸 선을 넘는녀석">
+                                <img src="//img1.daumcdn.net/thumb/C480x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/5b87bc1b042d433f9fa131e2b51b5c11"
+                                    class="img_pic" alt="자꾸 선을 넘는<br>녀석<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">자꾸 선을 넘는<br>녀석<br></strong>
+                                            <span class="txt_pic"></span>
+                                            <span class="info_by"><span class="ico_brunch ico_by">by</span> 써니</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                    <div class="wrap_pic PC_DISCOVER_B2  ">
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@Yjl/51" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@Yjl/51" data-tiara-setnum="4" data-tiara-copy="도로 한가운데서
+차가 멈췄다
+">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/2aa623e3182f406694c80fe5d5389482"
+                                    class="img_pic" alt="도로 한가운데서<br>차가 멈췄다<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">도로 한가운데서<br>차가 멈췄다<br></strong>
+                                            <span class="txt_pic">덜컹, 차가 울렁하더니 갑자기 나가지<br>않았다. 액셀을 밟아도 "웅웅"...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> LaLa</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@3sxW/78" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@3sxW/78" data-tiara-setnum="5" data-tiara-copy="외국에서
+남자친구보다 중요한
+것">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/47fe1ca36e2a4fecba90ef8eb8edd7fe"
+                                    class="img_pic" alt="외국에서<br>남자친구보다 중요한<br>것">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">외국에서<br>남자친구보다 중요한<br>것</strong>
+                                            <span class="txt_pic">방을 구한 후, 텅 빈 방을 어떻게든<br>내가 살 곳으로 만들어보려고 얼...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 백마띠 소녀</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@7NGF/82" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@7NGF/82" data-tiara-setnum="6" data-tiara-copy="ABC 주스의
+6가지 진실
+">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/a3c64b5841be467b9bdfae8f736351a1"
+                                    class="img_pic" alt="ABC 주스의<br>6가지 진실<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">ABC 주스의<br>6가지 진실<br></strong>
+                                            <span class="txt_pic">팩트체크 리스트 ✔ ABC 주스는<br>다이어트 식품이다? ✔ ABC ...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 여에스더</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                    <div class="wrap_pic PC_DISCOVER_D  ">
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@cq9j/33" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@cq9j/33" data-tiara-setnum="7" data-tiara-copy="65년생의 인생 첫
+연남동
+">
+                                <img src="//img1.daumcdn.net/thumb/C480x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/decf8b88274249af9778571b47e1c815"
+                                    class="img_pic" alt="65년생의 인생 첫<br>연남동<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">65년생의 인생 첫<br>연남동<br></strong>
+                                            <span class="txt_pic">모처럼 딸아이가 데이트 신청을 했다.<br>홍대역 근처 '블랑'이라는 베이...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> IBJ</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@4S8D/30" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@4S8D/30" data-tiara-setnum="8" data-tiara-copy="회사에서 소는 누가
+키우지
+">
+                                <img src="//img1.daumcdn.net/thumb/C480x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/0e23a868ea3645818d3fe63ae1523d9b"
+                                    class="img_pic" alt="회사에서 소는 누가<br>키우지<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">회사에서 소는 누가<br>키우지<br></strong>
+                                            <span class="txt_pic">“그건 거래처에서 우리 회사와의<br>거래가 수익이 적다고 소극적으로...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 임희걸</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@7ESB/81" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@7ESB/81" data-tiara-setnum="9" data-tiara-copy="아직도 인생은
+난리부르스
+">
+                                <img src="//img1.daumcdn.net/thumb/C480x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/e40c4a5373204f2e8a399cfec508fcfd"
+                                    class="img_pic" alt="아직도 인생은<br>난리부르스<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">아직도 인생은<br>난리부르스<br></strong>
+                                            <span class="txt_pic">2년. 카페를 차리면서 앞으로 2년만<br>바라봤다.&nbsp;2년 뒤에는 인생의
+                                                ...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 삼각커피</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type4 ">
+
+                            <a href="/@@1iFR/381" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@1iFR/381" data-tiara-setnum="10" data-tiara-copy="Q. 영양사도
+영양제 먹을까?
+">
+                                <img src="//img1.daumcdn.net/thumb/C480x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/2a8a7ad22e2a43eca9a4d4780821f7b0"
+                                    class="img_pic" alt="Q. 영양사도<br>영양제 먹을까?<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">Q. 영양사도<br>영양제 먹을까?<br></strong>
+                                            <span class="txt_pic">대답부터 얘기하자면 Yes. 그럼<br>여기서 던질 수 있는 질문 하나...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 이야기 빚는 여자</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrap_pic PC_DISCOVER_A  ">
+
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@7KVm/48" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@7KVm/48" data-tiara-setnum="11" data-tiara-copy="청소 궁합">
+                                <img src="//img1.daumcdn.net/thumb/C520x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/ae77f0a3ec4e4330a036ae9ae1bcb166"
+                                    class="img_pic" alt="청소 궁합">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">청소 궁합</strong>
+                                            <span class="txt_pic"> </span>
+                                            <span class="info_by"><span class="ico_by">by</span> 꿍꿍이</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@baAJ/3" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@baAJ/3" data-tiara-setnum="12" data-tiara-copy="막걸리, 마실 때
+꼭 지켜야 할 수칙
+3가지">
+                                <img src="//img1.daumcdn.net/thumb/C440x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/ba158650e005415b9d962cb2b0cdf4c5"
+                                    class="img_pic" alt="막걸리, 마실 때<br>꼭 지켜야 할 수칙<br>3가지">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">막걸리, 마실 때<br>꼭 지켜야 할 수칙<br>3가지</strong>
+                                            <span class="txt_pic">막걸리를 마실 때 꼭 지켜야 하는<br>수칙이 있다. 이 수칙은 수십 ...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 람디</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@di9k/8" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@di9k/8" data-tiara-setnum="13" data-tiara-copy="60년 웨이팅">
+                                <img src="//img1.daumcdn.net/thumb/C440x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/5257979749f440bc8c5ca05c7a2915ee"
+                                    class="img_pic" alt="60년 웨이팅">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">60년 웨이팅</strong>
+                                            <span class="txt_pic"> 아빠는 아들 둘을 잃고 하나 남은<br>귀한 종손이었다. 그 귀함이 어...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> Sienna</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+
+                    <div class="wrap_pic PC_DISCOVER_B2  ">
+
+
+
+
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@cLnO/30" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@cLnO/30" data-tiara-setnum="14" data-tiara-copy="카카오 송금으로
+부조를 한다고?
+">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/392a0a7e42ad438d8980ec79cebb1054"
+                                    class="img_pic" alt="카카오 송금으로<br>부조를 한다고?<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">카카오 송금으로<br>부조를 한다고?<br></strong>
+                                            <span class="txt_pic">얼마 전 부서 내 파견 직원의 조모상<br>소식을 알게 되었다. 그 직원은...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 고든</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@cL7f/22" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@cL7f/22" data-tiara-setnum="15" data-tiara-copy="배추찜쌈">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/f3ccab6bf94d4610b3b19dc236f78acd"
+                                    class="img_pic" alt="배추찜쌈">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">배추찜쌈</strong>
+                                            <span class="txt_pic"> 엊저녁에 갑자기 딸들이 삼겹살이<br>먹고 싶다는 요구에 퇴근길이었던...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 이혜주</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@2EVW/69" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@2EVW/69" data-tiara-setnum="16" data-tiara-copy="치유의 음식">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/ea510c8767ed4558a092a54e4091e374"
+                                    class="img_pic" alt="치유의 음식">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">치유의 음식</strong>
+                                            <span class="txt_pic">"오이야, 사랑해!" 누군가(:오이를<br>싫어하는 많은 사람들)이 들으면...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 파랑</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+
+                    <div class="wrap_pic PC_DISCOVER_F  ">
+
+
+
+
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@cr9z/28" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@cr9z/28" data-tiara-setnum="17"
+                                data-tiara-copy="자동차가 잘 찌그러져야 안전한 거라는 오해">
+                                <img src="//img1.daumcdn.net/thumb/C960x320.fjpg/?fname=https://t1.daumcdn.net/section/oc/b07acaf596e74c758aeb98194bb42d37"
+                                    class="img_pic" alt="자동차가 잘 찌그러져야 안전한 거라는 오해">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">자동차가 잘 찌그러져야 안전한 거라는 오해</strong>
+                                            <span class="txt_pic">전 세계 어디나 공학자들은 말을 길게 하지 않고, 설명도 썩 친절하...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 숲속의 작가</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@3FBg/484" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@3FBg/484" data-tiara-setnum="18" data-tiara-copy="까미의 새 가족">
+                                <img src="//img1.daumcdn.net/thumb/C320x200.fjpg/?fname=https://t1.daumcdn.net/section/oc/b968958320cb4f9ea7b94250a60097da"
+                                    class="img_pic" alt="까미의 새 가족">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">까미의 새 가족</strong>
+                                            <span class="txt_pic">아무래도 조금 급하게 일이 진행된<br>느낌이 없지 않다. 까미를 돌봐...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 구름조각</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@4rvl/23" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@4rvl/23" data-tiara-setnum="19" data-tiara-copy="다시 엄마 도시락을
+먹을 수 있을까
+">
+                                <img src="//img1.daumcdn.net/thumb/C320x200.fjpg/?fname=https://t1.daumcdn.net/section/oc/edbdb6d55cc64bef8e1be8262174dcbf"
+                                    class="img_pic" alt="다시 엄마 도시락을<br>먹을 수 있을까<br>">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">다시 엄마 도시락을<br>먹을 수 있을까<br></strong>
+                                            <span class="txt_pic">엄마, 이제 도시락 안 싸주셔도 돼요<br>결혼 얘기가 오갈 때쯤이었던 것...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 방탄유리</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type4 ">
+
+                            <a href="/@@5xpd/59" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@5xpd/59" data-tiara-setnum="20" data-tiara-copy="인생 최고의 주례">
+                                <img src="//img1.daumcdn.net/thumb/C320x200.fjpg/?fname=https://t1.daumcdn.net/section/oc/09edbfd7e6ec4d7dae2b8ad191cb1039"
+                                    class="img_pic" alt="인생 최고의 주례">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">인생 최고의 주례</strong>
+                                            <span class="txt_pic">사연이 덕지덕지 묻은 인연들을<br>좋아한다. 내 인생에서 장장 1...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 올리브많이</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+
+                    <div class="wrap_pic PC_DISCOVER_A  ">
+
+
+
+
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@vdq/36" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@vdq/36" data-tiara-setnum="21" data-tiara-copy="나는 깍두기">
+                                <img src="//img1.daumcdn.net/thumb/C520x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/b1d295eff0ea4fe78afea816a90c5a44"
+                                    class="img_pic" alt="나는 깍두기">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">나는 깍두기</strong>
+                                            <span class="txt_pic">깍두기 [명사]1. 무를 작고<br>네모나게 썰어서 소금에 절인 후...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 늦봄</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@JNz/14" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@JNz/14" data-tiara-setnum="22" data-tiara-copy="호주 '집안일
+연수'를 통해
+깨달은 것.">
+                                <img src="//img1.daumcdn.net/thumb/C440x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/07737bc91bf1418b8cbd0d6c93f6a85f"
+                                    class="img_pic" alt="호주 '집안일<br>연수'를 통해<br>깨달은 것.">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">호주 '집안일<br>연수'를 통해<br>깨달은 것.</strong>
+                                            <span class="txt_pic"> 하워드 카터가 투탕카멘 무덤을<br>발굴하기 위해 사막 여기저기를 ...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> Kimmy</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@ctdC/60" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@ctdC/60" data-tiara-setnum="23" data-tiara-copy="오늘은 뭐 먹지?">
+                                <img src="//img1.daumcdn.net/thumb/C440x260.fjpg/?fname=https://t1.daumcdn.net/section/oc/e510173b81cb40059af92327e6e1efce"
+                                    class="img_pic" alt="오늘은 뭐 먹지?">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">오늘은 뭐 먹지?</strong>
+                                            <span class="txt_pic">우리나라 사람이라면 한 번쯤 이 말을<br>들어봤을 것이다. 바로 한국인은...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 오녜</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+
+                    <div class="wrap_pic PC_DISCOVER_B2  ">
+
+
+
+
+                        <div class="item_pic item_pic_type1 ">
+
+                            <a href="/@@cvUS/173" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@cvUS/173" data-tiara-setnum="24" data-tiara-copy="잃어버린 양심">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/76dce62bbd9e4a6195068c57094168eb"
+                                    class="img_pic" alt="잃어버린 양심">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">잃어버린 양심</strong>
+                                            <span class="txt_pic"> 어렸을 때 엄마는 밥이 모자라면<br>콩나물을 듬뿍 사와 김치를 조금...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 송영희</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type2 ">
+
+                            <a href="/@@9IBL/34" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@9IBL/34" data-tiara-setnum="25" data-tiara-copy="여주 강천섬 백패킹">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/381fff7d11a64bda8cf5ba86d65e9240"
+                                    class="img_pic" alt="여주 강천섬 백패킹">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">여주 강천섬 백패킹</strong>
+                                            <span class="txt_pic">지난 5월 29일 여주 강천섬으로<br>처음이자 마지막 백패킹을 다녀왔...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 필란드</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="item_pic item_pic_type3 ">
+
+                            <a href="/@@7w2z/272" class="link_item #home_discover" target="_blank"
+                                data-tiara-action-name="TOP > 추천 콘텐츠 영역 클릭" data-tiara-action-kind="ClickContent"
+                                data-tiara-layer="recommended_article" data-tiara-id="@@"
+                                data-tiara-click_url="/@@7w2z/272" data-tiara-setnum="26" data-tiara-copy="남자의 자존심">
+                                <img src="//img1.daumcdn.net/thumb/C320x520.fjpg/?fname=https://t1.daumcdn.net/section/oc/c19f124f8e984675aa03be5962a1ce6e"
+                                    class="img_pic" alt="남자의 자존심">
+
+                                <div class="append_info">
+                                    <div class="info_g">
+                                        <div class="inner_g">
+                                            <em class="cate_pic"></em>
+                                            <strong class="tit_pic">남자의 자존심</strong>
+                                            <span class="txt_pic"> 요즘은 어디 실내에서 운동하기도<br>어려우니 종종 동네 산책길을 나...</span>
+                                            <span class="info_by"><span class="ico_by">by</span> 그림작가</span>
+                                        </div>
+                                    </div>
+                                    <div class="align_g"></div>
+                                </div>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="wrap_btn">
+                <a class="swiper-button-prev" style="display: block; z-index: 10;">
+                    <!-- <span class="ico_brunch">이전 에디터픽 보기</span> -->
+                </a>
+                <a class="swiper-button-next" style="display: block; z-index: 10">
+                    <!-- <span class=" ico_brunch">다음 에디터픽 보기</span> -->
+                </a>
+            </div>
+        </div>
+
+        
+        <!--버튼-->
+        <!-- <div class="wrap_paging"><span class="link_page"><span class="screen_out">현재페이지</span><span
+                    class="img_page txt_page1">01</span></span><a href="javascript:;" class="link_page"
+                data-page="2"><span class="img_page txt_page2">02</span></a><a href="javascript:;" class="link_page"
+                data-page="3"><span class="img_page txt_page3">03</span></a><a href="javascript:;" class="link_page"
+                data-page="4"><span class="img_page txt_page4">04</span></a><a href="javascript:;" class="link_page"
+                data-page="5"><span class="img_page txt_page5">05</span></a><a href="javascript:;" class="link_page"
+                data-page="6"><span class="img_page txt_page6">06</span></a><a href="javascript:;" class="link_page"
+                data-page="7"><span class="img_page txt_page7">07</span></a><a href="javascript:;" class="link_page"
+                data-page="8"><span class="img_page txt_page8">08</span></a><a href="javascript:;" class="link_page"
+                data-page="9"><span class="img_page txt_page9">09</span></a></div> -->
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const item=document.querySelectorAll(".list_slide>li");
+        console.log(item);
+
+        for(let i of item){
+            i.classList.add("swiper-slide");
+        }
+
+        var swiper = new Swiper(".swiper-container1", {
+            slidesPerView: 1,
+            slidesPerGroup: 3,
+            spaceBetween: 10,
+            initialSlide: 2,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
