@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 123px;
+    background-color: rgb(252, 252, 252);
+    z-index: 9999;
+}
+.inner_header{
+    height: 100%;
+    /* background-color: black; */
+}
+
+/* logo */
+.logo{
+    display: inline-block;
+    width: 132px;
+    height:63.99px;
+    /* background-color:aquamarine; */
+    margin-top:30px;
+}
+.logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -10000px;
+}
+
+/* nav list */
+.gnb{
+    width: 810px;
+    height: 18px;
+    margin: 63px 0px 42px 57px;
+    /* background-color: aliceblue; */
+}
+.gnb ul{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* gnb의 리스트 */
+.gnb li{
+    display: block;
+    float: left;
+    height: 100%;
+}
+/* gnb안에 있는 모든 글꼴 */
+.gnb_a{
+    display: block;
+    height: 100%;
+    padding: 0px 29px;
+    line-height:19px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+/* 개별요소 */
+.gnb_list1{
+    width: 152px;
+}
+.gnb_list1 a{
+    width: 94px;
+    /* background-color: aqua; */
+}
+.gnb_list2{
+    width: 112px;
+    /* background-color: beige; */
+}
+.gnb_list2 a{
+    width: 54px;
+    /* background-color: rgb(85, 76, 76); */
+}
+.gnb_list3{
+    width: 110px;
+    /* background-color: blue; */
+}
+.gnb_list3 a{
+    width: 52px;
+    /* background-color: blue; */
+}
+.gnb_list4{
+    width: 172px;
+    /* background-color: blue; */
+}
+.gnb_list4 a{
+    width: 114px;
+    /* background-color: rgb(77, 77, 108); */
+}
+
+.gnb_list5{
+    width: 122px;
+    /* background-color: blue; */
+}
+.gnb_list5 > a{
+    width: 64px;
+    /* background-color: rgb(54, 54, 131); */
+}
+.gnb_list6{
+    width: 142px;
+    /* background-color: blue; */
+}
+.gnb_list6 a{
+    width: 84px;
+    /* background-color: rgb(77, 77, 108); */
+}
+
+/* 가맹문의 버튼 */
+.info_btn{
+    display: inline-block;
+    width: 133px;
+    height:16.797px;
+    padding: 8px 0px 9px 0px;
+    margin-top:55px;
+    background-color: rgb(0, 165, 177);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    line-height: 19px;
+    font-size: 14px;
+    letter-spacing:0.5px;
+    color: rgb(255, 255, 255);
+}
+
+/* 언어 버튼입니다 */
+.lang{
+    position: absolute;
+    top: 25px;
+    right: 225px;
+    bottom:81.203px;
+    width: 56.984px;
+    height: 16.797px;
+    /* background-color: black; */
+    padding:0;
+}
+.kr{
+    display:inline-block;
+    width: 15.828px;
+    height: 14.391px;
+    padding: 0px 7px 0px 6px;
+    /* background-color: aqua; */
+    text-decoration: none;
+    line-height: 14.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+.en{
+    display:inline-block;
+    width: 16.016px;
+    height: 14.391px;
+    border-left: 1px solid rgb(194, 194, 194);
+    padding: 0px 0px 0px 6px;
+    /* background-color: aqua; */
+    text-decoration: none;
+    line-height: 14.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(169, 169, 169);
+}
+
+.depth_list{
+    display: none;
+    position: relative;
+    width: 150px;
+    height: 240px;
+    padding-top: 60px;
+    /* background-color: aqua; */
+    z-index: 500;
+    text-align: center;
+}
+.depth_inner_list_a{
+    display: none;
+    height: 32.8px;
+    /* background-color: aliceblue; */
+    padding: 2px 29px;
+}
+
+.depth_inner_list{
+    /* display:none; */
+    width: 100%;
+    height: 32.8px;
+    padding: 8px 0px;
+    font-size: 14px;
+    font-family: Roboto;
+}
+.depth_inner_global{
+    display:none;
+    text-align: center;
+    width: 100%;
+    height: 33px;
+    /* background-color: aliceblue; */
+}
+.depth_inner_global3{
+    width: 130px;
+} 
+/* 안보이는 배경화면 */
+.depth{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 250px;
+    z-index:100;
+    top: 0;
+    left: 0;
+    background-color: rgb(231, 231, 231);
+    margin-top: 123px;
+    opacity: 0.9;
+}
+/* 디스플레이의 속성을 변환합니다 */
+.on{
+    display: block;
+}
+.fix{
+    position: fixed;
+}
+
+
+
