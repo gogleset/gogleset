@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+.footer{
+    width: 100%;
+    height: 222px;
+    
+    color: rgb(85, 85, 85);
+}
+.footer1{
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    
+    text-align: center;
+    margin: auto;
+    border-top: 1px solid rgb(206, 206, 206);
+    border-bottom: 0.2em solid  rgb(207, 207, 207);
+}
+.footer1 a{
+    display: inline-block;
+    padding: 0 14px;
+    font-size: 12px;
+    color: #555;
+    height: 12px;
+    margin-top: 15px;
+    border-left: solid 1px rgb(211, 211, 211);
+}
+.footer1 a:first-child{
+    border-left: none;
+}
+
+/* footer2 */
+.footer2{
+    width: 1020px;
+    height: 100px;
+    
+    margin: auto;
+}
+.footer2 h1{
+    background-image: url(/img/footer_asset_v10.png);
+    width: 120px;
+    height: 80px;
+    margin-top: 20px;
+    background-position: -20px -30px;
+ 
+    display: block;
+    text-indent: -10000px;
+}
+.footer address{
+    font-size: 12px;
+    font-style: normal;
+    display: block;
+    width: 290px;
+    height: 74px;
+
+    margin-top: 20px;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+.footer_info{
+    width: 290px;
+    height: 78px;
+  
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-left: 10px;
+    line-height: 20px;
+    
+}
+.footer_info2{
+    display: block;
+    width: 290px;
+    height: 76px;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 4px;
+    padding-left: 10px;
+    line-height: 15px;
+    
+}
+/* footer2 끝 */
+
+
+
+/* footer3 */
+
+
+
+/* footer4 */
+.footer4{
+    width: 100%;
+    height: 110px;
+    background-color: #000;
+    margin-top: 10px;
+}
+.footer4_inner{
+    width: 1020px;
+    height: 80px;
+    margin: auto;
+}
+.footer4_inner p{
+    font-size: 11px;
+    line-height: 15px;
+    padding-top: 15px;
+   
+    display: block;
+    width: 850px;
+    height: 65px;
+    margin-left: 10px;
+    color: #666;
+    font-size: 12px;
+}
+.sns{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    display: block;
+    margin: 20px 20px  ;
+}
+.facebook{
+    margin: 2px;
+    width: 35px;
+    height: 35px;
+    background-image: url(/img/footer_asset_v10.png);
+    background-position: -220px -30px;
+    display: block;
+}
+.blog{
+    margin: 2px;
+    width: 35px;
+    height: 35px;
+    background-image: url(/img/footer_asset_v10.png);
+    background-position: -347px -30px;
+    display: block;
+}
+.instagram{
+    margin: 2px;
+    width: 35px;
+    height: 35px;
+    background-image: url(/img/footer_asset_v10.png);
+    background-position: -389px -30px;
+    display: block;
+}
