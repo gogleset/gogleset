@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+.pull-left{
+ float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.center{
+    margin: auto;
+}
+
+.clearfix::after{
+    display: block;
+    content: '';
+    float: none;
+    clear: both;
+}
+
+.container{
+    min-width: 1020px;
+}

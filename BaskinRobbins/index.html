@@ -795,13 +795,13 @@
             img1.classList.toggle('act-visual');
             // 애니메이션 시간을 늦춥니다. transition-delay (양수)
             box1.style.setProperty('transition-delay', '0.5s');
-        })
+        });
         box.addEventListener('mouseover', e => {
             box.classList.toggle('act');
             box1.classList.toggle('act-visual');
             img1.classList.toggle('act-visual');
             box1.style.setProperty('transition-delay', '0.5s');
-        })
+        });
 
         // 마우스 아웃 시 (설명)
         btn.addEventListener('mouseout', e => {
@@ -811,13 +811,13 @@
             img1.classList.toggle('act-visual');
             // 애니메이션 시간을 빠르게합니다. transition-delay (음수)
             box1.style.setProperty('transition-delay', '-2s');
-        })
+        });
         box.addEventListener('mouseout', e => {
             box.classList.toggle('act');
             box1.classList.toggle('act-visual');
             img1.classList.toggle('act-visual');
             box1.style.setProperty('transition-delay', '-2s');
-        })
+        });
 
 
 
@@ -860,7 +860,7 @@
         }
         console.log(String(random(0, 1)));
 
-        // 사진을 가로축으로 없앱니다
+        // 사진을 가로,세로축으로 없앱니다
         let count = 0;
         setInterval(() => {
             count += 2;
@@ -892,7 +892,7 @@
             } else if (count === 13) {
                 count = 0;
             }
-        }, 1000)
+        }, 2000)
 
         // setInterval(() => {
         //     console.log("타이머가동중");
