@@ -41,7 +41,7 @@
     <!-- 전체화면입니다. -->
     <div class="container">
         <!-- 베스킨라빈스의 헤더입니다.-->
-        <header class="header">
+        <div class="header">
             <!-- 맨위 안쪽 헤더입니다 -->
             <div class="inner_header clearfix">
                 <!-- 로고를 포함한 부분입니다 -->
@@ -108,9 +108,6 @@
                         </ul>
                     </nav>
                 </div>
-
-
-
                 <!-- 로그인을 포함한 부분입니다. -->
                 <div class="top_menu">
                     <div class="top_menu_inner max-width div-center">
@@ -286,7 +283,9 @@
                     </nav>
                 </div>
             </div>
-        </header>
+        </div>
+
+
         <!-- content1 -->
         <div class="content1">
             <a href="#">
@@ -295,7 +294,7 @@
         </div>
 
         <!-- content2 슬라이드 부분입니다-->
-        <div class="content2 swiper mySwiper">
+        <div class="content2">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -588,7 +587,6 @@
                         <a class="picture1 pull-left" pull-left" href="#">
                             <a class="inner_picture inner1" href="#"></a>
                         </a>
-                        </a>
                     </div>
                     <div class="real_content pull-left">
                         <a class="picture2 pull-left" href="#">
@@ -876,7 +874,7 @@
             const picture = document.querySelector(".picture" + String(count));
             const picture1 = document.querySelector(".picture" + String(count + 1));
 
-            // 사진의 크기를 랜덥하게 변경합니다
+            // 사진의 크기를 랜덤하게 변경합니다
 
             if (random_number == "0") {
                 picture.classList.toggle("picture_x");
